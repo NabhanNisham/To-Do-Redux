@@ -18,3 +18,15 @@ export const addTodo = (text) => {
       payload: id,
     };
   };
+
+  export const editTodo = (id, newText) => {
+    return {
+      type: 'EDIT_TODO',
+      payload: { id, newText },
+    };
+  };
+
+  export const rehydrateTodos = (todos) => ({
+    type: 'REHYDRATE_TODOS',
+    payload: todos,
+  });
